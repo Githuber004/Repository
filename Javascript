@@ -1,0 +1,14 @@
+let http = require('http');
+
+function requestCallback(request, response) {
+    console.log("Hellooooo");
+
+    response.write('Hello World');
+    response.end();
+}
+
+let server = http.createServer(requestCallback);
+
+server.listen(8000);
+
+console.log("listening...");
